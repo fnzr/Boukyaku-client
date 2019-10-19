@@ -15,14 +15,12 @@
 import urljoin from "url-join";
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { Cover } from "@models";
-import { IMAGE_PROXY, IMAGE_HOST } from "../config";
-
 @Component
 export default class CoverContainer extends Vue {
   @Prop() cover!: Cover;
 
   url(path: string) {
-    return urljoin(IMAGE_PROXY, "300x285,fit", IMAGE_HOST, path);
+    return urljoin("/vault", "300x285,fit", path);
   }
 }
 </script>
