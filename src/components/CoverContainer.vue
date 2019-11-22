@@ -20,7 +20,7 @@ export default class CoverContainer extends Vue {
   @Prop() cover!: Cover;
 
   url(path: string) {
-    return urljoin("/vault", "300x285,fit", path);
+    return urljoin("/vault", "", path);
   }
 }
 </script>
